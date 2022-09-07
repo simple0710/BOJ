@@ -1,8 +1,8 @@
 import sys
 input = sys.stdin.readline
 
-n = int(input())
 data = list()
+n = int(input())
 for i in range(n):
     data.append(int(input()))
 # 기호 1번은 따로 분류해둔다.

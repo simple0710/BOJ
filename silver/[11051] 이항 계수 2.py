@@ -4,7 +4,6 @@ n, k = map(int,input().split())
 
 result = 1
 div = 1
-
 for i in range(k):
     result *= n
     n -= 1

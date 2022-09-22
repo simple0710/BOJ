@@ -1,3 +1,4 @@
+# 백트래킹
 def dfs():
   if len(s) == m:
     print(' '.join(map(str,s)))

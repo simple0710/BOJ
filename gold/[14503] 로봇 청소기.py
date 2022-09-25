@@ -3,8 +3,11 @@ x, y, d = map(int, input().split())
 data = [list(map(int, input().split())) for _ in range(n)]
 move_data = [list([0] * m) for _ in range(n)]
 
+# 북, 동, 남, 서
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]
+
+# 시작 지점 청소
 move_data[x][y] = 1
 cnt = 1
 turn_time = 0
@@ -39,5 +42,4 @@ while True:
     else:
       break
     turn_time = 0
-
 print(cnt)

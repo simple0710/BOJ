@@ -1,3 +1,4 @@
+# 이분 탐색
 # 나무의 수와 필요한 나무 수를 입력 받는다.
 n, m = map(int,input().split())
 data = list(map(int,input().split()))

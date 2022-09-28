@@ -8,6 +8,7 @@ def bfs():
   global answer
   new_data = copy.deepcopy(data)
   q = deque()
+  # 바이러스에 해당하는 영역을 q에 추가한다.
   for i in range(n):
     for j in range(m):
       if new_data[i][j] == 2:

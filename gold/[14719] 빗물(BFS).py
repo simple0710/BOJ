@@ -11,7 +11,7 @@ def bfs(x, y):
       nx = x + dx[i]
       ny = y + dy[i]
       # graph[0] 과 graph[-1] 에 빈 공간이 있어봐야 물이 고이지 않는다.
-      if 0 <= nx < n-1 and 1 <= ny < m-1 and graph[nx][ny] == 0:
+      if 0 <= nx < n and 1 <= ny < m-1 and graph[nx][ny] == 0:
         # 좌, 우를 확인해서 벽이 있다면 total += 1
         if (1 in graph[nx][ny+1:]) and (1 in graph[nx][:ny]):
           graph[nx][ny] = 2
@@ -39,7 +39,7 @@ for i in range(n):
     if graph[i][j] == 0:
       # 한 영역만 0인 경우 대비
       if (1 in graph[i][j+1:]) and (1 in graph[i][:j]):
-        graph[i][j] = 1
+        graph[i][j] = 2
         total += 1
         bfs(i, j)
         

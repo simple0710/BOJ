@@ -20,7 +20,6 @@ for _ in range(int(input())):
   visited = [([0] * length) for _ in range(length)]
   x, y = map(int, input().split())
   fx, fy = map(int,input().split())
-  cnt = 0
   bfs(x, y)
   # 좌표가 같은 경우
   if x == fx and y == fy:

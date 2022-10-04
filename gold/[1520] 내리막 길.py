@@ -2,7 +2,7 @@ import sys
 sys.setrecursionlimit(10**8)
 input = sys.stdin.readline
 
-# 깊이 우선 탐색
+# 깊이 우선 탐색 + dp
 def dfs(x, y):
   # 목적지에 도착했을 경우 1을 반환
   if x == n-1 and y == m-1:

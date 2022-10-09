@@ -1,6 +1,6 @@
 import sys
 input = sys.stdin.readline
-sys.setrecursionlimit(10**6)
+sys.setrecursionlimit(100000)
 
 def dfs(x, y):
   if dp[x][y]: # 0이면 false 1이상이면 True

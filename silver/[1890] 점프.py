@@ -16,6 +16,5 @@ for i in range(n):
       dp[d][j] += dp[i][j]
     if r < n:
       dp[i][r] += dp[i][j]
-for i in dp:
-  print(i)
+
 print(dp[n-1][n-1])

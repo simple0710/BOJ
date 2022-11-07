@@ -49,6 +49,7 @@ for _ in range(int(input())):
       res = dfs(i, 1)
       if not res:
         break
+  # 정답 출력
   if res:
     print("YES")
   else:

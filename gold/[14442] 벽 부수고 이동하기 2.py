@@ -1,4 +1,4 @@
-# 2022/11/10 너비우선탐색
+# 2022/11/11 너비우선탐색
 from collections import deque
 import sys
 input = sys.stdin.readline

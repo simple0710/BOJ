@@ -41,5 +41,6 @@ for i in arr:
         x -= 1
     res[x][y] = '.'
 
+# 정답 출력
 for i in res:
   print(''.join(map(str, i)))

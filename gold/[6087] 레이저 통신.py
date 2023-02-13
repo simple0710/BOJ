@@ -15,7 +15,7 @@ def bfs(s, e):
   while q:
     idx, x, y = q.popleft()
     if (x, y) == e:
-      return visited[idx][x][y] - 2 # 시작시 +1, 도착시 +1을 빼준다.
+      return visited[idx][x][y] - 2 # 시작시 +1, 도착시 +1을 빼준 값을 반환한다.
     for i in range(4):
       nx = x
       ny = y

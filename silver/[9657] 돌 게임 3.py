@@ -2,7 +2,6 @@
 # https://www.acmicpc.net/problem/9657
 N = int(input())
 dp = [0] * 1001
-
 dp[1] = 1
 dp[3] = 1
 dp[4] = 1

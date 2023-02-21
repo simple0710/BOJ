@@ -15,7 +15,6 @@ for i in range(5, N+1):
   # i-4번째에 상대가 돌을 둔 경우
   if not dp[i-4]:
     dp[i] = 1
-  print(dp[:7])
 
 # 해당 위치에 돌이 있으면 SK 출력
 if dp[N]:

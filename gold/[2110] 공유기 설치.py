@@ -17,7 +17,7 @@ def search():
         s = data[i]
     if cnt >= C: # 더 많은 공유기를 설치할 수 있거나 같은 경우 값을 올린다.
       start = mid + 1
-      res = mid # 정답
+      res = mid
     else: # 아닌 경우 값을 낮춘다.
       end = mid - 1
   # 정답 반환

@@ -1,4 +1,4 @@
-# 2023/02/27
+# 2023/02/27 수학
 # https://www.acmicpc.net/problem/27512
 n, m = map(int,input().split())
 res = n * m

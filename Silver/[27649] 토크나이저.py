@@ -3,7 +3,7 @@
 import sys
 input = sys.stdin.readline
 
-word = ' '.join(input().rstrip().split())
+word = input().rstrip()
 res = []
 s = 0
 flag = False
@@ -11,7 +11,7 @@ for i in range(len(word)):
   if flag: # '&&' or '||'의 경우 두번째 경우는 넘긴다.
     flag = False
     continue
-  # 해당 문자가 구분자인 경우ㄴ
+  # 해당 문자가 구분자인 경우
   if word[i] in ['<', '>', '&', '|', '(', ')']:
     # 이전 문자열 저장
     res.append(word[s:i]) 

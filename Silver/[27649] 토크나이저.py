@@ -31,5 +31,6 @@ if s < len(word):
 # 정답 분류하기
 res = ' '.join(map(str, res)).split()
 res = ' '.join(res)
+
 # 정답 출력
 print(res)

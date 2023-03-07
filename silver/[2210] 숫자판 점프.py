@@ -24,7 +24,7 @@ data = [list(map(str,input().rstrip().split())) for _ in range(5)]
 res = set()
 for i in range(5):
   for j in range(5):
-    # 위치, 깊이, 단어
+    # 위치, 깊이, 숫자
     dfs(i, j, 0, data[i][j])
 
 # 정답 출력

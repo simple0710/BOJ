@@ -12,16 +12,6 @@ def question(visited, nx, ny, turn):
   else:
     return False
 
-# 한 방향으로 감시한다.
-def cctv_search(x, y, t, visited):
-  t %= 4
-  nx = x + dx[t]
-  ny = y + dy[t]
-  while question(visited, nx, ny, t):
-    visited[nx][ny] = t
-    nx += dx[t]
-    ny += dy[t]
-
 def search(idx, visited):
   if idx == len(cctv):
     global res
@@ -29,8 +19,8 @@ def search(idx, visited):
     # 사각지대의 합 조사
     for i in visited:
       p += i.count(-1)
+    # cctv를 지나쳐서 감시한 적이 없는 경우 -1
     for x, y in cctv:
-      # cctv를 지나쳐서 감시한 적이 없는 경우 -1
       if visited[x][y] == -1:
         p -= 1
     res = min(res, p - wall)
@@ -40,31 +30,76 @@ def search(idx, visited):
   if data[x][y] == 1:
     for i in range(4):
       new_visited = copy.deepcopy(visited)
-      cctv_search(x, y, i, new_visited)
+      nx = x + dx[i]
+      ny = y + dy[i]
+      while question(new_visited, nx, ny, i):
+        new_visited[nx][ny] = i
+        nx += dx[i]
+        ny += dy[i]
       search(idx + 1, new_visited)
   elif data[x][y] == 2:
     for i in range(2):
       new_visited = copy.deepcopy(visited)
-      cctv_search(x, y, i, new_visited)
-      cctv_search(x, y, i+2, new_visited)
+      nx = x + dx[i]
+      ny = y + dy[i]
+      while question(new_visited, nx, ny, i):
+        new_visited[nx][ny] = i
+        nx += dx[i]
+        ny += dy[i]
+      nx = x + dx[i+2]
+      ny = y + dy[i+2]
+      while question(new_visited, nx, ny, i + 2):
+        new_visited[nx][ny] = i + 2
+        nx += dx[i+2]
+        ny += dy[i+2]
       search(idx + 1, new_visited)
   elif data[x][y] == 3:
     for i in range(4):
       new_visited = copy.deepcopy(visited)
-      cctv_search(x, y, i, new_visited)
-      cctv_search(x, y, i+1, new_visited)
+      nx = x + dx[i]
+      ny = y + dy[i]
+      while question(new_visited, nx, ny, i):
+        new_visited[nx][ny] = i
+        nx += dx[i]
+        ny += dy[i]
+      nx = x + dx[(i+1)%4]
+      ny = y + dy[(i+1)%4]
+      while question(new_visited, nx, ny, i+1):
+        new_visited[nx][ny] = i+1
+        nx += dx[(i+1)%4]
+        ny += dy[(i+1)%4]
       search(idx + 1, new_visited)
   elif data[x][y] == 4:
     for i in range(4):
       new_visited = copy.deepcopy(visited)
-      cctv_search(x, y, i, new_visited)
-      cctv_search(x, y, i+1, new_visited)
-      cctv_search(x, y, i+2, new_visited)
+      nx = x + dx[i]
+      ny = y + dy[i]
+      while question(new_visited, nx, ny, i):
+        new_visited[nx][ny] = i
+        nx += dx[i]
+        ny += dy[i]
+      nx = x + dx[(i+1)%4]
+      ny = y + dy[(i+1)%4]
+      while question(new_visited, nx, ny, i+1):
+        new_visited[nx][ny] = (i+1)
+        nx += dx[(i+1) % 4]
+        ny += dy[(i+1) % 4]
+      nx = x + dx[(i+2)%4]
+      ny = y + dy[(i+2)%4]
+      while question(new_visited, nx, ny, i+2):
+        new_visited[nx][ny] = (i+2)
+        nx += dx[(i+2)%4]
+        ny += dy[(i+2)%4]
       search(idx + 1, new_visited)
   elif data[x][y] == 5:
     new_visited = copy.deepcopy(visited)
     for i in range(4):
-      cctv_search(x, y, i, new_visited)
+      nx = x + dx[i]
+      ny = y + dy[i]
+      while question(new_visited, nx, ny, i):
+        new_visited[nx][ny] = i
+        nx += dx[i]
+        ny += dy[i]
     search(idx + 1, new_visited)
 
 N, M = map(int,input().split())

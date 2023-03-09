@@ -86,4 +86,4 @@ for i in range(N):
 search(0, visited)
 
 # 정답 출력
-print(res)
+print(res);

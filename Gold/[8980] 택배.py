@@ -2,7 +2,7 @@
 # https://www.acmicpc.net/problem/8980
 N, C = map(int,input().split())
 T = int(input())
-box = []
+box = [];
 for _ in range(T):
   no, trans, cnt = map(int,input().split())
   box.append([no, trans, cnt])

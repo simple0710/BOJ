@@ -1,4 +1,4 @@
-# 2023/03/09 우선순위 큐(heapq)
+# 2023/03/09 우선순위 큐(heapq).
 # https://www.acmicpc.net/problem/1202
 import sys, heapq
 input = sys.stdin.readline

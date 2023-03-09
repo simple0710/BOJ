@@ -1,6 +1,6 @@
 # 2023/02/19 구현, Brute Force
 # https://www.acmicpc.net/problem/15683
-import sys, copy
+import sys, copy;
 input = sys.stdin.readline
 dx = [-1, 0, 1, 0]
 dy = [0, 1, 0, -1]

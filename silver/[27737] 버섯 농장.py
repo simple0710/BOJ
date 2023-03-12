@@ -38,9 +38,9 @@ if not area: # 심을 수 있는 공간이 없는 경우
   flag = False
 while area:
   f = area.pop(0)
-  check += f // K # 해당 구역의 필요한 포자를 심어본다.
+  check += f // K # 해당 구역의 공간에 필요한 포자를 심어본다.
   f %= K
-  if f % K: # 구역이 남는다면 하나 더 심는다.
+  if f % K: # 공간이 남는다면 하나 더 심는다.
     check += 1
 
 if flag and M - check >= 0: # 포자를 심을 수 있는 경우 "POSSIBLE" 출력

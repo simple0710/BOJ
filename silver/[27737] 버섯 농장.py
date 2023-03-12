@@ -18,6 +18,7 @@ def bfs(x, y):
         q.append((nx, ny))
         visited[nx][ny] = True
         cnt += 1
+  # 구역의 공간 수 반환
   return cnt
 
 N, M, K = map(int,input().split())

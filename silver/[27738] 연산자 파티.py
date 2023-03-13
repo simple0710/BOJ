@@ -21,4 +21,3 @@ for i in range(arr[5] * (N // arr[5]) + 1, N + 1):
     res |= i
 # 정답 출력
 print(res)
-  

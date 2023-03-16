@@ -6,40 +6,39 @@ input = sys.stdin.readline
 dx = [0, 0, -1, 1]
 dy = [1, -1, 0, 0]
 
-def start_controll(x, y, c):
+def start_control(x, y, c):
   visited = [[False] * C for _ in range(R)]
-  if 0 <= x + dx[c] < R and 0 <= y + dy[c] < C:
-    q = deque([(x + dx[c], y + dy[c], 5)])
-    while q:
-      x, y, v = q.popleft()
-      data[x][y] += v
-      if v > 1:
-        nx = x + dx[c]
-        ny = y + dy[c]
-        if 0 <= nx < R and 0 <= ny < C:
-          if not wall[c][x][y] and not visited[nx][ny]:
-            q.append((nx, ny, v - 1))
-            visited[nx][ny] = True
-          if c >= 2: 
-            if 0 <= y - 1:
-              if not wall[1][x][y] and not wall[c][x][y-1] and not visited[nx][y-1]:
-                q.append((nx, y-1, v-1))
-                visited[nx][y-1] = True
-            if y + 1 < C:
-              if not wall[0][x][y] and not wall[c][x][y+1] and not visited[nx][y+1]:
-                q.append((nx, y+1, v-1))
-                visited[nx][y+1] = True
-          else:
-              if 0 <= x - 1:
-                if not wall[2][x][y] and not wall[c][x-1][y]  and not visited[x-1][ny]:
-                  q.append((x-1, ny, v-1))
-                  visited[x-1][ny] = True
-              if x + 1 < R:
-                if not wall[3][x][y] and not wall[c][x+1][y] and not visited[x+1][ny]:
-                  q.append((x+1, ny, v-1))
-                  visited[x+1][ny] = True
+  q = deque([(x + dx[c], y + dy[c], 5)])
+  while q:
+    x, y, v = q.popleft()
+    data[x][y] += v
+    if v > 1:
+      nx = x + dx[c]
+      ny = y + dy[c]
+      if 0 <= nx < R and 0 <= ny < C:
+        if not wall[c][x][y] and not visited[nx][ny]:
+          q.append((nx, ny, v - 1))
+          visited[nx][ny] = True
+        if c >= 2: 
+          if 0 <= y - 1:
+            if not wall[1][x][y] and not wall[c][x][y-1] and not visited[nx][y-1]:
+              q.append((nx, y-1, v-1))
+              visited[nx][y-1] = True
+          if y + 1 < C:
+            if not wall[0][x][y] and not wall[c][x][y+1] and not visited[nx][y+1]:
+              q.append((nx, y+1, v-1))
+              visited[nx][y+1] = True
+        else:
+            if 0 <= x - 1:
+              if not wall[2][x][y] and not wall[c][x-1][y]  and not visited[x-1][ny]:
+                q.append((x-1, ny, v-1))
+                visited[x-1][ny] = True
+            if x + 1 < R:
+              if not wall[3][x][y] and not wall[c][x+1][y] and not visited[x+1][ny]:
+                q.append((x+1, ny, v-1))
+                visited[x+1][ny] = True
 
-def tmp_controll(data):
+def tmp_control(data):
   n_data = copy.deepcopy(data)
   for x in range(R):
     for y in range(C):
@@ -99,9 +98,9 @@ res = 0
 while True:
   # 1. 온풍기 시작
   for x, y, c in s_area:
-    start_controll(x, y, c-1)
+    start_control(x, y, c-1)
   # 2. 온도 조절
-  data = tmp_controll(data)
+  data = tmp_control(data)
   # 3. 바깥 지역 온도 조절
   check_outside()
   # 4. 초콜릿 먹기

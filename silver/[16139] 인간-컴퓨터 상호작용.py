@@ -13,4 +13,4 @@ for i in range(len(word)): # 누적 합 계산
 for _ in range(int(input())):
   q = input().split()
   # 정답 출력
-  print(dic[int(q[2])][q[0]]- dic[int(q[1])-1][q[0]])
+  print(dic[int(q[2])][q[0]] - dic[int(q[1])-1][q[0]])

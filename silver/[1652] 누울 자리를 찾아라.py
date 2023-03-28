@@ -29,7 +29,7 @@ room = [list(input().rstrip()) for _ in range(N)]
 res_c = 0
 res_r = 0
 for i in range(N):
-  # 탐색
+  # 탐색 시작
   a, b = search(i)
   res_r += a
   res_c += b 

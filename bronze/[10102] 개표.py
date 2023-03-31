@@ -1,4 +1,4 @@
-# 2023/03/24 Implementation
+# 2023/03/24 String
 # https://www.acmicpc.net/problem/10102
 N = int(input())
 data = input()

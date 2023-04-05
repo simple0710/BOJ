@@ -6,6 +6,7 @@ for _ in range(int(input())):
   B = sorted(list(map(int,input().split())))
   res = 0
   e = M - 1
+  # 탐색 시작
   for i in A:
     while e >= 0:
       if B[e] < i: # 해당 값보다 큰 경우

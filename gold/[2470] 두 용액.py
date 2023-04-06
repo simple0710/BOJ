@@ -3,7 +3,7 @@
 import sys
 input = sys.stdin.readline
 
-def search(): # Binary_Search
+def search(): # TwoPointer
   MAX = sys.maxsize
   s = 0
   e = len(arr) - 1

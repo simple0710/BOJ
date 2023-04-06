@@ -1,4 +1,4 @@
-# 2023/01/24 두 포인터
+# 2023/01/24 TwoPointer
 # https://www.acmicpc.net/problem/2470
 import sys
 input = sys.stdin.readline

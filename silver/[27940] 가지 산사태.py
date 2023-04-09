@@ -5,7 +5,7 @@ input = sys.stdin.readline
 
 N, M, K = map(int,input().split())
 res = -1
-check = 0
+check = 0 # 빗물의 합
 for ind in range(M):
   t, r = map(int, input().split())
   check += r

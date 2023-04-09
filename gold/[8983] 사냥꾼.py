@@ -1,4 +1,4 @@
-# 2023/04/09 Binary_Search, Sorting
+# 2023/04/09 BinarySearch, Sorting
 # https://www.acmicpc.net/problem/8983
 def binary_search(a, b):
   s = 0

@@ -5,7 +5,7 @@ def binary_search(a, b):
   e = M - 1
   while s <= e:
     mid = (s + e) // 2
-    if abs(s_data[mid] - a) + b <= L: # 사거리 안인 경우
+    if abs(s_data[mid] - a) + b <= L: # 사정거리 안인 경우
       return 1
     else: # 범위 밖인 경우 탐색 재개
       if s_data[mid] - a < 0:

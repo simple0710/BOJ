@@ -8,8 +8,8 @@ for i in range(H + X):
   for j in range(W + Y):
     if i < X and j < W: # 앞부분
       check.append(data[i][j])
-    elif X <= i < H and j < W: # 뒷부분
-      if i - X >= 0 and j - Y >= 0: # 겹치는 부분인 경우
+    elif i < H and j < W: # 뒷부분
+      if i - X >= 0 and j - Y >= 0: # 겹치는 경우
         check.append(data[i][j] - res[i-X][j-Y])
       else: # 겹치지 않는 경우
         check.append(data[i][j])

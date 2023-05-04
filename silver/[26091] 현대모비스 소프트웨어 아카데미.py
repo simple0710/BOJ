@@ -1,4 +1,4 @@
-# 2023/05/04 TwoPointer
+# 2023/05/04 TwoPointer, Sorting
 # https://www.acmicpc.net/problem/26091
 def two_pointer():
   res = 0

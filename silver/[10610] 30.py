@@ -12,4 +12,5 @@ else:
   if check % 3 != 0: # 3의 배수가 아닌 경우
     print(-1)
   else:
+    # 정답 출력
     print(''.join(N))

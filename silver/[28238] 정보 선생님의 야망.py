@@ -1,4 +1,4 @@
-# 2023/06/17 Implemnetation, Bruteforce, Combinatiorics
+# 2023/06/17 Implemnetation, Bruteforce, Combinatorics
 # https://www.acmicpc.net/problem/28238
 from itertools import combinations
 import sys

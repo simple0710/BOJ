@@ -7,7 +7,7 @@
 [![Solved.ac Profile](http://mazassumnida.wtf/api/generate_badge?boj=simple710)](https://solved.ac/profile/simple710)
 
 
-<img src="http://mazandi.herokuapp.com/api?handle=(simple710)&theme=(Dark)"/>
+<img src="http://mazandi.herokuapp.com/api?handle=simple710&theme=Dark"/>
 
 
 - title : [문제 번호] 문제 이름.py

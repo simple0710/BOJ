@@ -1,5 +1,5 @@
 # Baekjoon with Python
- <img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/>
+ <div align="center"><img src="https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white"/></div>
 
 [solved]https://solved.ac/profile/simple710
 

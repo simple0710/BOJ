@@ -1,4 +1,4 @@
-# 2023/08/03 Implementation
+# 2023/08/02 Implementation
 # https://www.acmicpc.net/problem/2920
 data = list(map(int,input().split()))
 if data == list(range(1, 9)): # 순서대로 연주한 경우

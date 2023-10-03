@@ -21,7 +21,7 @@ def solution(N, K):
           # i번째 색을 포함시키지 않고 j개의 색을 선택하는 경우의 수
           dp[i][j] = dp[i-2][j-1] + dp[i-1][j]
         dp[i][j] %= int(1e9)+3
-  return dp[N][K] # N번째 색을 인접하지 않도록 K개의 색을 선택하는 경우의 수 반환
+  return dp[N][K] # N가지 색을 인접하지 않도록 K개의 색을 선택하는 경우의 수 반환
 
 def main():
   N = int(input())

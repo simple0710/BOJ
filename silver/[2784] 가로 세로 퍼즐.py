@@ -4,13 +4,15 @@ from itertools import permutations
 import sys
 input = sys.stdin.readline
 
-def check(board): # 구현 되는지 확인
+def check(board):
+  # 가로 세로 단어를 확인
   check_board = [words[i] for i in board]
   for i in range(3):
     w = ''
     for j in board:
       w += words[j][i]
     check_board.append(w)
+  # 처음 주어진 단어들과 같은 경우 True
   return True if words == sorted(check_board) else False
 
 def back(): # 퍼즐에 둘 수 있는 모든 경우의 수 구하기

@@ -1,4 +1,4 @@
-# 2023/10/19 Implemenatation, Simulation
+# 2023/10/19 Implementation, Simulation
 # https://www.acmicpc.net/problem/20006
 import sys
 inpuut = sys.stdin.readline

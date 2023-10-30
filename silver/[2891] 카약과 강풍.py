@@ -1,23 +1,25 @@
-# 2022/11/07 그리디 알고리즘
-import sys
-input = sys.stdin.readline
-
-# 정보 입력
+# 2023/06/28 Implementation, Greedy
+# https://www.acmicpc.net/problem/2891
 N, S, R = map(int,input().split())
-BreakTeam = list(map(int,input().split()))
-MoreTeam = list(map(int,input().split()))
-BreakTeam.sort()
-MoreTeam.sort()
-
-# 카약 추가분을 가지고 있는 팀에 대해서 while 수행
-while MoreTeam:
-  x = MoreTeam.pop(0)
-  if x in BreakTeam:
-    BreakTeam.remove(x)
-  elif x-1 in BreakTeam:
-    BreakTeam.remove(x-1)
-  elif x+1 in BreakTeam:
-    BreakTeam.remove(x+1)
-
+s_team = list(map(int,input().split()))
+r_team = list(map(int,input().split()))
+# 여분의 카약이 있는 팀은 자신의 것을 사용
+cnt = 0
+sf_team = []
+for i in s_team:
+  if i not in r_team:
+    sf_team.append(i)
+  else:
+    cnt += 1
+    r_team.remove(i)
+# 카약 빌리기
+for i in sf_team:
+  if i-1 in r_team:
+    cnt += 1
+    r_team.remove(i-1)
+    continue
+  if i+1 in r_team:
+    cnt += 1
+    r_team.remove(i+1)
 # 정답 출력
-print(len(BreakTeam))
+print(S - cnt)

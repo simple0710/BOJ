@@ -3,7 +3,7 @@
 import sys
 input = sys.stdin.readline
 
-def binary_search_s(): # 시작점 확인
+def binary_search_s(): # 시작 점 확인
   s = 0
   e = N - 1
   check = N
@@ -16,7 +16,7 @@ def binary_search_s(): # 시작점 확인
       s = mid + 1
   return check
 
-def binary_search_e(): # 끝점 확인
+def binary_search_e(): # 끝 점 확인
   s = 0
   e = N - 1
   check = -1
@@ -32,7 +32,7 @@ def binary_search_e(): # 끝점 확인
 N, M = map(int,input().split())
 point = sorted(list(map(int, input().split())))
 for _ in range(M):
-  # 시작점, 끝점
+  # 시작 점, 끝 점
   sp, ep = map(int,input().split())
   # 정답 출력
   print(binary_search_e() - binary_search_s() + 1)

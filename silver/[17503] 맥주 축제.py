@@ -30,7 +30,7 @@ def binary_search():
   s = 1
   e = MAX 
   while s <= e:
-    mid = (s + e) // 2 # 간 레벨 계싼
+    mid = (s + e) // 2 # 간 레벨 계산
     check = []
     for v, c in beer:
       # 1. 맥주 도수 레벨 > 간 레벨 == 기절

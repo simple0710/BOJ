@@ -1,4 +1,4 @@
-# 2023/12/17 Implementation, Bruteforcing
+# 2023/12/17 Implementation, Combinatorics, Bruteforcing, Backtracking
 # https://www.acmicpc.net/problem/16922
 def main():
   N = int(input())
